@@ -26,7 +26,7 @@ pip install -r requirements.txt
 ```
 
 # Run demonstration
-Demonstration in jupyter notebook
+Demonstration in jupyter notebook `demonstration.ipynb`
 
 # Run script
 ```sh
