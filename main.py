@@ -6,11 +6,12 @@ import os
 def anonymise_text(text: str) -> str:
     assert isinstance(text, str)
 
-    llm = Ollama(model="llama3")
+    # load model
+    llm = Ollama(model="llama3", base_url="http://192.168.1.70:11434")
 
-    prompt = """
-    In the following text, replace names with <NAME>, phone numbers with <PHONE_NUMBER>, and addresses with <ADDRESS>.
-    """
+    # load prompt
+    with open("prompt.txt", "r") as f:
+        prompt = f.read().strip() + "\n\n"
 
     return llm.invoke(prompt + text)
 

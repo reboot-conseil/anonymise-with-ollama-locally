@@ -42,3 +42,6 @@ options:
   --output OUTPUT  Optional. Path to output text file
   -v, --verbose    Optional. Verbose mode
 ```
+
+# Customize
+You can customize the prompt in the file `prompt.txt`
